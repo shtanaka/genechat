@@ -1,0 +1,1 @@
+web: gunicorn genechat.wsgi --log-file -
