@@ -17,28 +17,13 @@ To use this project, follow these steps:
 	
 	$ pip install -r requirements.txt
 	
-3. Configure Database. This project is using postgresql. if you have it installed, do the following:
+## Configure Database. This project is using postgresql. if you have it installed, do the following:
 	
-
-	$ pip install -r requirements.txt
-
-3. Configure Database. This project is using postgresql. if you have it installed, do the following:
 	$ psql
 	$ CREATEDB genechat;
 	$ CREATE ROLE user WITH LOGIN PASSWORD 'password';
 	$ GRANT ALL PRIVILEGES ON DATABASE genechat TO user;
 	$ ALTER USER user CREATEDB;
-
-3.1 After that, modify user, password and database in settings.py 
-
-## authenticate in heroku
-
-	$ heroku login
-
-## Test Locally
-
-=======
-3.1 After that, modify user, password and database in settings.py 
 
 ## authenticate in heroku
 
@@ -48,13 +33,15 @@ To use this project, follow these steps:
 
 	$ heroku local web
 
+## authenticate in heroku
+
+	$ heroku login
+
 ## Deployment to Heroku
 	
 	$ heroku 
     $ heroku create
     $ git push heroku master
     $ heroku run python manage.py migrate
-
-
 
 ## Based in the following project: https://github.com/heroku/heroku-django-template
