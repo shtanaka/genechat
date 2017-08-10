@@ -19,12 +19,25 @@ To use this project, follow these steps:
 	
 3. Configure Database. This project is using postgresql. if you have it installed, do the following:
 	
+
+	$ pip install -r requirements.txt
+
+3. Configure Database. This project is using postgresql. if you have it installed, do the following:
 	$ psql
 	$ CREATEDB genechat;
 	$ CREATE ROLE user WITH LOGIN PASSWORD 'password';
 	$ GRANT ALL PRIVILEGES ON DATABASE genechat TO user;
 	$ ALTER USER user CREATEDB;
 
+3.1 After that, modify user, password and database in settings.py 
+
+## authenticate in heroku
+
+	$ heroku login
+
+## Test Locally
+
+=======
 3.1 After that, modify user, password and database in settings.py 
 
 ## authenticate in heroku
